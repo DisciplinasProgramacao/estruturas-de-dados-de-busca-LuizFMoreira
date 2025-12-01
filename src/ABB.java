@@ -132,11 +132,54 @@ public class ABB<K, V> implements IMapeamento<K, V>{
      * 
      * @return o tamanho atualizado da árvore após a execução da operação de inserção.
      */
-    public int inserir(K chave, V item) {
-    	
-    	// TODO
-        return tamanho;
+    
+
+	
+	public int inserir(K chave, V item) {
+    // Prepara para medir desempenho
+    comparacoes = 0;
+    inicio = System.nanoTime();
+    
+    // Insere recursivamente e atualiza a raiz
+    raiz = inserirRecursivo(raiz, chave, item);
+    
+    // Atualiza contadores
+    tamanho++;
+    termino = System.nanoTime();
+    
+    return tamanho;
+}
+
+/**
+ * Método recursivo auxiliar para inserir um nó
+ * @param no O nó atual sendo analisado
+ * @param chave A chave a ser inserida
+ * @param item O valor a ser inserido
+ * @return O nó atualizado após a inserção
+ */
+private No<K, V> inserirRecursivo(No<K, V> no, K chave, V item) {
+    // Caso base: encontrou posição para inserir
+    if (no == null) {
+        return new No<>(chave, item);
     }
+    
+    // Compara a chave com o nó atual
+    comparacoes++;
+    int cmp = comparador.compare(chave, no.getChave());
+    
+    if (cmp < 0) {
+        // Chave menor - insere na subárvore esquerda
+        no.setEsquerda(inserirRecursivo(no.getEsquerda(), chave, item));
+    } else if (cmp > 0) {
+        // Chave maior - insere na subárvore direita
+        no.setDireita(inserirRecursivo(no.getDireita(), chave, item));
+    } else {
+        // Chave já existe - atualiza o valor
+        no.setItem(item);
+    }
+    
+    return no;
+}
 
     @Override 
     public String toString(){
@@ -148,11 +191,7 @@ public class ABB<K, V> implements IMapeamento<K, V>{
     	return caminhamentoEmOrdem();
     }
 
-    public String caminhamentoEmOrdem() {
-    	
-    	// TODO
-    	return null;
-    }
+    
 
     @Override
     /**
@@ -160,11 +199,77 @@ public class ABB<K, V> implements IMapeamento<K, V>{
      * @param chave a chave do item que deverá ser localizado e removido da árvore.
      * @return o valor associado ao item removido.
      */
-    public V remover(K chave) {
-    	
-    	// TODO
-    	return null;
+
+	 @Override
+public V remover(K chave) {
+    comparacoes = 0;
+    inicio = System.nanoTime();
+    
+    try {
+        // Armazena o valor antes de remover
+        V valorRemovido = pesquisar(chave);
+        raiz = removerRecursivo(raiz, chave);
+        tamanho--;
+        termino = System.nanoTime();
+        return valorRemovido;
+    } catch (NoSuchElementException e) {
+        termino = System.nanoTime();
+        throw e;
     }
+}
+
+private No<K, V> removerRecursivo(No<K, V> no, K chave) {
+    if (no == null) {
+        return null;
+    }
+    
+    comparacoes++;
+    int cmp = comparador.compare(chave, no.getChave());
+    
+    if (cmp < 0) {
+        no.setEsquerda(removerRecursivo(no.getEsquerda(), chave));
+    } else if (cmp > 0) {
+        no.setDireita(removerRecursivo(no.getDireita(), chave));
+    } else {
+        // Caso 1: Nó com 0 ou 1 filho
+        if (no.getEsquerda() == null) {
+            return no.getDireita();
+        } else if (no.getDireita() == null) {
+            return no.getEsquerda();
+        }
+        
+        // Caso 2: Nó com 2 filhos
+        No<K, V> sucessor = encontrarMenor(no.getDireita());
+        no.setChave(sucessor.getChave());
+        no.setItem(sucessor.getItem());
+        no.setDireita(removerRecursivo(no.getDireita(), sucessor.getChave()));
+    }
+    
+    return no;
+}
+
+private No<K, V> encontrarMenor(No<K, V> no) {
+    while (no.getEsquerda() != null) {
+        comparacoes++;
+        no = no.getEsquerda();
+    }
+    return no;
+}
+
+public String caminhamentoEmOrdem() {
+    StringBuilder sb = new StringBuilder();
+    caminhamentoEmOrdem(raiz, sb);
+    return sb.toString();
+}
+
+private void caminhamentoEmOrdem(No<K, V> no, StringBuilder sb) {
+    if (no != null) {
+        caminhamentoEmOrdem(no.getEsquerda(), sb);
+        sb.append(no.toString()).append("\n");
+        caminhamentoEmOrdem(no.getDireita(), sb);
+    }
+}
+
 
 	@Override
 	public int tamanho() {
@@ -181,3 +286,4 @@ public class ABB<K, V> implements IMapeamento<K, V>{
 		return (termino - inicio) / 1_000_000;
 	}
 }
+

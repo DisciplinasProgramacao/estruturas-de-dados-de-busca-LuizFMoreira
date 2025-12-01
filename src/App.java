@@ -130,17 +130,54 @@ public class App {
     /** Localiza um produto na árvore de produtos organizados por id, a partir do código de produto informado pelo usuário, e o retorna. 
      *  Em caso de não encontrar o produto, retorna null */
     static Produto localizarProdutoID(ABB<Integer, Produto> produtosCadastrados) {
+    
+        cabecalho();
+        System.out.println("LOCALIZAR PRODUTO POR ID");
+        System.out.println("========================");
         
-        // TODO
-    	return null;
+        // Solicita o ID do produto ao usuário
+        Integer id = lerOpcao("Digite o ID do produto: ", Integer.class);
+        
+        if (id == null) {
+            System.out.println("ID inválido!");
+            return null;
+        }
+        
+        // Usa o método genérico para localizar o produto
+        Produto produto = localizarProduto(produtosCadastrados, id);
+        
+        if (produto == null) {
+            System.out.println("Produto com ID " + id + " não encontrado!");
+        }
+        
+        return produto;
     }
     
     /** Localiza um produto na árvore de produtos organizados por nome, a partir do nome de produto informado pelo usuário, e o retorna. 
      *  A busca não é sensível ao caso. Em caso de não encontrar o produto, retorna null */
     static Produto localizarProdutoNome(ABB<String, Produto> produtosCadastrados) {
+    
+        cabecalho();
+        System.out.println("LOCALIZAR PRODUTO POR NOME");
+        System.out.println("==========================");
         
-    	// TODO
-    	return null;
+        // Solicita o nome do produto ao usuário
+        System.out.print("Digite o nome do produto: ");
+        String nome = teclado.nextLine().trim();
+        
+        if (nome.isEmpty()) {
+            System.out.println("Nome não pode estar vazio!");
+            return null;
+        }
+        
+        // Usa o método genérico para localizar o produto
+        Produto produto = localizarProduto(produtosCadastrados, nome);
+        
+        if (produto == null) {
+            System.out.println("Produto '" + nome + "' não encontrado!");
+        }
+        
+        return produto;
     }
     
     private static void mostrarProduto(Produto produto) {
@@ -184,3 +221,8 @@ public class App {
         teclado.close();    
     }
 }
+
+
+
+
+
