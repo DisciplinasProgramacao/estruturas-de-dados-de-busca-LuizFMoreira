@@ -59,6 +59,26 @@ public class Lista<E> implements IMedicao {
 		this.tamanho++;
 	}
 	
+	public Celula<E> getPrimeiro() {
+		return primeiro;
+	}
+
+	public Celula<E> getUltimo() {
+		return ultimo;
+	}
+
+	public int getTamanho() {
+		return tamanho;
+	}
+
+	public long getInicio() {
+		return inicio;
+	}
+
+	public long getTermino() {
+		return termino;
+	}
+
 	private E removerProxima(Celula<E> anterior) {
 		
 		Celula<E> celulaRemovida, proximaCelula;
@@ -195,7 +215,19 @@ public class Lista<E> implements IMedicao {
    		}
    		return (soma);
    	}
-   	
+   	public E pegar(int posicao) {
+    if (posicao < 0 || posicao >= this.tamanho) {
+        throw new IndexOutOfBoundsException("Posição inválida!");
+    }
+
+    Celula<E> atual = this.primeiro.getProximo();
+    for (int i = 0; i < posicao; i++) {
+        atual = atual.getProximo();
+    }
+
+    return atual.getItem();
+}
+
 	public int tamanho() {
 		return tamanho;
 	}

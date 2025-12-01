@@ -50,31 +50,32 @@ public class ABB<K, V> implements IMapeamento<K, V>{
      * @param original a árvore binária de busca original.
      * @param funcaoChave a função que irá extrair a nova chave de cada item para a nova árvore.
      */
-   
-public ABB(ABB<?, V> original, Function<V, K> funcaoChave, Comparator<K> comparador) {
-    init(comparador);
-    copiarArvore(original.raiz, funcaoChave);
-}
-
-/**
- * Método auxiliar recursivo para copiar os elementos da árvore original para esta árvore.
- * @param raizArvore raiz da árvore original que será copiada.
- * @param funcaoChave função extratora da nova chave para cada item da árvore.
- */
-private void copiarArvore(No<?, V> raizArvore, Function<V, K> funcaoChave) {
-    if (raizArvore != null) {
-        // Copia recursivamente a subárvore esquerda (percurso em ordem)
-        copiarArvore(raizArvore.getEsquerda(), funcaoChave);
-        
-        // Insere o item atual com a nova chave
-        V item = raizArvore.getItem();
-        K novaChave = funcaoChave.apply(item);
-        this.inserir(novaChave, item);
-        
-        // Copia recursivamente a subárvore direita
-        copiarArvore(raizArvore.getDireita(), funcaoChave);
+    public ABB(ABB<?, V> original, Function<V, K> funcaoChave, Comparator<K> comparador) {
+        ABB<K, V> nova = new ABB<>();
+        nova = copiarArvore(original.raiz, funcaoChave, nova);
+        this.raiz = nova.raiz;
+        this.comparador = comparador;
     }
-}
+    
+    /**
+     * Recursivamente, copia os elementos da árvore original para esta, num processo análogo ao caminhamento em ordem.
+     * @param <T> Tipo da nova chave.
+     * @param raizArvore raiz da árvore original que será copiada.
+     * @param funcaoChave função extratora da nova chave para cada item da árvore.
+     * @param novaArvore Nova árvore. Parâmetro usado para permitir o retorno da recursividade.
+     * @return A nova árvore com os itens copiados e usando a chave indicada pela função extratora.
+     */
+    private <T> ABB<T, V> copiarArvore(No<?, V> raizArvore, Function<V, T> funcaoChave, ABB<T, V> novaArvore) {
+    	
+        if (raizArvore != null) {
+    		novaArvore = copiarArvore(raizArvore.getEsquerda(), funcaoChave, novaArvore);
+            V item = raizArvore.getItem();
+            T chave = funcaoChave.apply(item);
+    		novaArvore.inserir(chave, item);
+    		novaArvore = copiarArvore(raizArvore.getDireita(), funcaoChave, novaArvore);
+    	}
+        return novaArvore;
+    }
     
     /**
 	 * Método booleano que indica se a árvore está vazia ou não.
