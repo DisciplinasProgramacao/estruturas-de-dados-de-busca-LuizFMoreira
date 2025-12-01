@@ -1,0 +1,132 @@
+Relatório de Pedidos - Envelope Laranja
+========================================
+Número do pedido: 746
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+Número do pedido: 3362
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago parcelado.
+Valor total do pedido: R$ 9,73
+
+Número do pedido: 3655
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+Número do pedido: 4361
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+Número do pedido: 4903
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+Número do pedido: 9588
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago parcelado.
+Valor total do pedido: R$ 9,73
+
+Número do pedido: 12749
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago parcelado.
+Valor total do pedido: R$ 9,73
+
+Número do pedido: 12750
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+Número do pedido: 15133
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+Número do pedido: 16389
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+Número do pedido: 16822
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago parcelado.
+Valor total do pedido: R$ 9,73
+
+Número do pedido: 16971
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago parcelado.
+Valor total do pedido: R$ 9,73
+
+Número do pedido: 18634
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago parcelado.
+Valor total do pedido: R$ 9,73
+
+Número do pedido: 23327
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+Número do pedido: 23564
+Data do pedido: 01/12/2025
+Pedido com 2 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+ID: 10002 NOME: Transferidor Laranja claro: R$ 3,06
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 10,87
+
+Número do pedido: 24544
+Data do pedido: 01/12/2025
+Pedido com 1 produtos.
+Produtos no pedido:
+ID: 10001 NOME: Envelope Laranja: R$ 9,73
+Pedido pago à vista. Percentual de desconto: 15,00%
+Valor total do pedido: R$ 8,27
+
+

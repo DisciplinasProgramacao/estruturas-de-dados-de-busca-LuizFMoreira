@@ -1,0 +1,9 @@
+=== RELATÓRIO COMPLETO DO FORNECEDOR ===
+Fornecedor: Alpha Atacadista Artigos
+Documento: 10001
+Produtos vendidos:
+A lista está vazia!
+
+=== ESTATÍSTICAS DE PESQUISA ===
+Número de comparações realizadas: 10
+Tempo de processamento da pesquisa: 0.0 ms

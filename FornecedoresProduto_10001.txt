@@ -1,0 +1,58 @@
+=== RELATÓRIO DE FORNECEDORES DO PRODUTO ===
+Produto: Envelope Laranja
+ID: 10001
+Data de geração: 2025-12-01
+============================================
+
+QUANTIDADE DE FORNECEDORES: 9
+
+LISTA DE FORNECEDORES:
+======================
+1. Fornecedor: Bright Mercantil Papers
+2. Documento: 10131
+3. Produtos vendidos:
+4. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+5. 
+6. Fornecedor: Orange Distribuidora Papers
+7. Documento: 10539
+8. Produtos vendidos:
+9. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+10. 
+11. Fornecedor: Plus Atacadista Material Escolar
+12. Documento: 10603
+13. Produtos vendidos:
+14. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+15. 
+16. Fornecedor: Premium Mercantil Material Escolar
+17. Documento: 10656
+18. Produtos vendidos:
+19. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+20. 
+21. Fornecedor: Star Serviços Papers
+22. Documento: 10786
+23. Produtos vendidos:
+24. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+25. 
+26. Fornecedor: Star Supply Office
+27. Documento: 10794
+28. Produtos vendidos:
+29. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+30. 
+31. Fornecedor: Top Comercial Artigos
+32. Documento: 10833
+33. Produtos vendidos:
+34. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+35. 
+36. Fornecedor: Ultra Mercantil Office
+37. Documento: 10885
+38. Produtos vendidos:
+39. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+40. 
+41. Fornecedor: Uni Mercantil Suprimentos
+42. Documento: 10923
+43. Produtos vendidos:
+44. ID: 10001 NOME: Envelope Laranja: R$ 9,73
+
+=== ESTATÍSTICAS DA PESQUISA ===
+Número de comparações realizadas: 2
+Tempo de processamento da pesquisa: 0.0 ms

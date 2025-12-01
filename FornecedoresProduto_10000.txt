@@ -1,0 +1,7 @@
+=== RELATÓRIO DE FORNECEDORES DO PRODUTO ===
+Produto: Fita adesiva Branco fantasma
+ID: 10000
+Data: 2025-12-01
+============================================
+
+NENHUM FORNECEDOR ENCONTRADO PARA ESTE PRODUTO.
